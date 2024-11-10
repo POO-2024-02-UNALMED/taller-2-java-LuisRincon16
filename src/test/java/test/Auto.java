@@ -1,9 +1,6 @@
 package test;
 
 class Auto{
-    Motor men1 = new Motor();
-    Asiento men2 = new Asiento();
-
     String modelo;
     int precio;
     Asiento[] asientos;
@@ -24,11 +21,11 @@ class Auto{
     public String verificarIntegridad(){
         for (Asiento a : this.asientos){
             if (a instanceof Asiento){
-                if(a.registro == this.motor.registro && this.motor.registro == this.registro) {
-                    return "Auto original";
+                if(a.registro != this.motor.registro || this.motor.registro != this.registro || a.registro != this.registro) {
+                    return "Las piezas no son originales";
                 }   
             }
         }
-        return "Las piezas no son originales";
+        return "Auto original";
     }
 }
