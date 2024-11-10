@@ -12,20 +12,23 @@ class Auto{
     int registro;
     static int cantidadCreados;
 
-    int cantidadAsientos(){
+    public int cantidadAsientos(){
         num_asientos = 0;
-        for(Asiento a : asientos){
+        for(Asiento a : this.asientos){
             if (a instanceof Asientos){
-                cantidadCreados = ++num_asientos;
+                ++num_asientos;
             }
         }
+        return num_asientos;
     }
-    public void verificarIntegridad(){
-        if (registro == men1.registro && men1.registro == men2.registro){
-            System.out.println("Auto original");
-        }   else{
-            System.out.println("Las piezas no son originales");
+    public String verificarIntegridad(){
+        for (Asiento a : this.asientos){
+            if (a instanceof Asiento){
+                if (a.registro == motor.registro && motor.registro == this.registro) {
+                    return "Auto Original";
+                }
+            }
         }
-
+        return "Las piezas no son originales";
     }
 }

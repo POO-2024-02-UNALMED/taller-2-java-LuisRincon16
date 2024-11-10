@@ -8,8 +8,8 @@ class Asiento{
     String[] colores_disponibles = {"rojo", "verde", "amarillo", "negro", "blanco"};
 
     public void cambiarColor(String color){
-        for(String colores : colores_disponibles){
-            if (colores.equals(color)){
+        for(String k : colores_disponibles){
+            if (k.equals(color)){
                 this.color = color;
             }
         }
