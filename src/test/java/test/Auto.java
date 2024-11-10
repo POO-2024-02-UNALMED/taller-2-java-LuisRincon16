@@ -16,7 +16,7 @@ class Auto{
         num_asientos = 0;
         for(Asiento a : asientos){
             if (a instanceof Asientos){
-                ++num_asientos;
+                cantidadCreados = ++num_asientos;
             }
         }
     }
