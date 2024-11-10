@@ -10,12 +10,17 @@ class Auto{
     String marca;
     Motor motor;
     int registro;
-    static String cantidadCreados;
+    static int cantidadCreados;
 
-    cantidadAsientos(){
-
+    int cantidadAsientos(){
+        num_asientos = 0;
+        for(Asiento a : asientos){
+            if (a instanceof Asientos){
+                ++num_asientos;
+            }
+        }
     }
-    verificarIntegridad(){
+    public void verificarIntegridad(){
         if (registro == men1.registro && men1.registro == men2.registro){
             System.out.println("Auto original");
         }   else{
