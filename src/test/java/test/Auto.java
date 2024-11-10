@@ -13,7 +13,7 @@ class Auto{
     static int cantidadCreados;
 
     public int cantidadAsientos(){
-        num_asientos = 0;
+        int num_asientos = 0;
         for(Asiento a : this.asientos){
             if (a instanceof Asientos){
                 ++num_asientos;
